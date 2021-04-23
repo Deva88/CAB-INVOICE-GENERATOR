@@ -10,13 +10,12 @@ public class RideRepository {
      * @Description- RideRepository const is created where ID is passes to check
      * that
      */
-
     public RideRepository(HashMap<Integer, Ride[]> rideRepository, Integer id) {
         this.rideRepository = rideRepository;
         this.id = id;
     }
 
-     public InvoiceSummary calculateFare() {
+    public InvoiceSummary calculateFare() {
         try {
             if (this.id == null || this.rideRepository.get(id) == null) {
                 throw new NullPointerException("Null value not allowed.");

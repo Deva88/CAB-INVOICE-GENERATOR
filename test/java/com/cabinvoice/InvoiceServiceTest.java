@@ -28,6 +28,7 @@ public class InvoiceServiceTest {
         double fare = invoiceGenerator.calculateFare(distance, time);
         Assertions.assertEquals(25, fare, 0.0);
     }
+
     //Test Case For Minimum Fare.
     @Test
     public void givenLessDistanceAndTime_ShouldReturnMinimumFare() {
@@ -36,11 +37,11 @@ public class InvoiceServiceTest {
         double fare = invoiceGenerator.calculateFare(distance, time);
         Assertions.assertEquals(5, fare, 0.0);
     }
+
     /*
      * @Description-Checking for given Multiple Ride Should Return The Total Fare
      * Here that check for number of rides Array is created for that.
      */
-
     @Test
     public void givenMultipleRides_ShouldReturnInvoiceSummary() {
         Ride[] rides = {new Ride(2.0, 5),
